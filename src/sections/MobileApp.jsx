@@ -5,10 +5,10 @@ import SlideShell from "../components/SlideShell";
 import PhoneMockup from "../components/PhoneMockup";
 
 const screens = [
-  { src: "/assets/driver/home.png", icon: MapPinned, label: "Почетен екран" },
-  { src: "/assets/driver/results.png", icon: Search, label: "Пребарување" },
-  { src: "/assets/driver/reservation.png", icon: CalendarCheck, label: "Резервација" },
-  { src: "/assets/driver/qr-ticket.png", icon: QrCode, label: "QR билет" },
+  { src: "/assets/app-flow/01-home.png", icon: MapPinned, label: "Почетен екран" },
+  { src: "/assets/app-flow/02-search.png", icon: Search, label: "Пребарување" },
+  { src: "/assets/app-flow/03-reservation.png", icon: CalendarCheck, label: "Резервација" },
+  { src: "/assets/app-flow/04-qr-ticket.png", icon: QrCode, label: "QR билет" },
 ];
 
 export default function MobileApp() {

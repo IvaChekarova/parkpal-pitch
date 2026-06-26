@@ -13,7 +13,7 @@ export default function Business() {
   return (
     <SlideShell id="business" theme="light">
       <SectionHeading
-        eyebrow="10 · Бизнис модел"
+        eyebrow="09 · Бизнис модел"
         title="Модел кој расте со заедницата"
         subtitle="ParkPal е платформа со јасен пат до одржлив приход и растечки пазар."
       />

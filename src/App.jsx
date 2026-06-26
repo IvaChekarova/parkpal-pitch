@@ -6,11 +6,11 @@ import TargetUsers from "./sections/TargetUsers";
 import MobileApp from "./sections/MobileApp";
 import KeyFeatures from "./sections/KeyFeatures";
 import Architecture from "./sections/Architecture";
-import Database from "./sections/Database";
 import IoT from "./sections/IoT";
 import AIFuture from "./sections/AIFuture";
 import Business from "./sections/Business";
 import Conclusion from "./sections/Conclusion";
+import QASlide from "./sections/QASlide";
 
 export default function App() {
   return (
@@ -24,11 +24,11 @@ export default function App() {
         <MobileApp />
         <KeyFeatures />
         <Architecture />
-        <Database />
         <IoT />
         <AIFuture />
         <Business />
         <Conclusion />
+        <QASlide />
       </main>
     </div>
   );

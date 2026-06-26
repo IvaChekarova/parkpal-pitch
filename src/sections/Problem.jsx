@@ -1,4 +1,4 @@
-import { Car, Clock, ParkingSquareOff, Home } from "lucide-react";
+import { Car, ClipboardList, Clock, ParkingSquareOff, Home } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import SlideShell from "../components/SlideShell";
@@ -59,6 +59,16 @@ export default function Problem() {
       <Reveal direction="up" delay={0.2}>
         <p className="mt-6 text-center font-display text-lg font-bold text-ink sm:mt-8 sm:text-3xl">
           „Како да ги поврземе возачите со слободниот паркинг простор?“
+        </p>
+      </Reveal>
+
+      <Reveal direction="up" delay={0.28}>
+        <p className="mx-auto mt-3 flex max-w-4xl items-start justify-center gap-2 text-center text-xs leading-relaxed text-slate-400 sm:mt-4 sm:text-sm">
+          <ClipboardList size={15} strokeWidth={1.8} className="mt-0.5 shrink-0 text-slate-400" />
+          <span>
+            Извор: Авторска анкета спроведена помеѓу 110 возачи во Скопје, дополнета со релевантни
+            истражувања за урбана мобилност.
+          </span>
         </p>
       </Reveal>
     </SlideShell>

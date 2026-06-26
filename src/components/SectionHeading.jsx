@@ -13,7 +13,7 @@ export default function SectionHeading({
     <div className={`flex flex-col gap-4 ${alignClass}`}>
       {eyebrow && (
         <Reveal direction="up">
-          <span className={`section-eyebrow ${light ? "text-blue-300" : ""}`}>{eyebrow}</span>
+          <span className={`section-eyebrow ${light ? "!text-white" : ""}`}>{eyebrow}</span>
         </Reveal>
       )}
       <Reveal direction="up" delay={0.08}>

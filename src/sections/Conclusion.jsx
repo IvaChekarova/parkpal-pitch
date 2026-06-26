@@ -1,73 +1,63 @@
-import { motion } from "framer-motion";
-import {
-  Cpu,
-  Database,
-  MapPin,
-  QrCode,
-  Server,
-  ShieldCheck,
-  Smartphone,
-} from "lucide-react";
+import { ArrowRight, Cpu, Smartphone } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SlideShell from "../components/SlideShell";
 
-const achievements = [
+const demoParts = [
   { icon: Smartphone, label: "Мобилна апликација" },
-  { icon: Server, label: "Backend систем" },
-  { icon: Database, label: "PostgreSQL база" },
-  { icon: QrCode, label: "QR резервациски систем" },
-  { icon: ShieldCheck, label: "Администраторска контролна табла" },
   { icon: Cpu, label: "IoT прототип" },
 ];
 
 export default function Conclusion() {
   return (
-    <SlideShell id="conclusion" theme="gradient">
-      <div className="bg-grid absolute inset-0 opacity-10" />
-
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-white/10"
-          style={{ left: `${10 + i * 18}%`, top: `${(i % 3) * 30 + 8}%` }}
-          animate={{ y: [0, -24, 0], opacity: [0.1, 0.25, 0.1] }}
-          transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
-        >
-          <MapPin size={36 + (i % 3) * 14} />
-        </motion.div>
-      ))}
+    <SlideShell id="conclusion" theme="dark" className="bg-gradient-to-br from-[#1B579D] via-[#214A83] to-[#10213D]">
+      <div className="bg-grid absolute inset-0 opacity-[0.07]" />
+      <div className="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#60A5FA]/20 blur-3xl" />
+      <div className="absolute -bottom-48 right-[-12rem] h-[34rem] w-[34rem] rounded-full bg-secondary/12 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl text-center">
         <Reveal direction="up">
-          <span className="section-eyebrow text-blue-200">11 · Заклучок</span>
+          <img
+            src="/assets/brand/parkpal-logo.svg"
+            alt="ParkPal"
+            className="mx-auto h-16 w-auto brightness-0 invert drop-shadow-2xl sm:h-20"
+          />
         </Reveal>
-        <Reveal direction="up" delay={0.06}>
-          <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-            ParkPal е завршен MVP, спремен за реалниот свет
+        <Reveal direction="up" delay={0.12}>
+          <h2 className="mx-auto mt-7 max-w-4xl font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">
+            ParkPal е повеќе од концепт.
           </h2>
         </Reveal>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
-          {achievements.map(({ icon: Icon, label }, i) => (
-            <Reveal key={label} direction="scale" delay={i * 0.07}>
-              <div className="glass-dark flex flex-col items-center gap-2 rounded-2xl px-3 py-3 text-center sm:gap-3 sm:py-6">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 text-white sm:h-11 sm:w-11">
-                  <Icon size={18} strokeWidth={2.2} className="sm:hidden" />
-                  <Icon size={20} strokeWidth={2.2} className="hidden sm:block" />
-                </span>
-                <span className="text-xs font-semibold leading-snug text-white">{label}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal direction="up" delay={0.2}>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-blue-50/85 sm:text-xl">
+            Во продолжение ќе ви демонстрирам како ParkPal функционира во реални услови преку
+            мобилната апликација и IoT прототипот.
+          </p>
+        </Reveal>
+
+        <Reveal direction="up" delay={0.28}>
+          <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+            <div className="glass-dark flex min-w-[220px] items-center justify-center gap-3 rounded-2xl px-5 py-4 text-white shadow-xl shadow-ink/10">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/12 text-white">
+                <Smartphone size={20} strokeWidth={2.2} />
+              </span>
+              <span className="font-display text-base font-bold sm:text-lg">{demoParts[0].label}</span>
+            </div>
+            <ArrowRight className="hidden text-white/40 sm:block" size={24} strokeWidth={2} />
+            <div className="glass-dark flex min-w-[220px] items-center justify-center gap-3 rounded-2xl px-5 py-4 text-white shadow-xl shadow-ink/10">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/12 text-white">
+                <Cpu size={20} strokeWidth={2.2} />
+              </span>
+              <span className="font-display text-base font-bold sm:text-lg">{demoParts[1].label}</span>
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal direction="up" delay={0.35}>
-          <div className="mt-6 flex flex-col items-center gap-2 sm:mt-10 sm:gap-3">
-            <p className="font-display text-2xl font-extrabold text-white sm:text-4xl md:text-5xl">
-              Ви благодарам за вниманието.
+          <div className="mt-8 flex flex-col items-center gap-2 sm:mt-12 sm:gap-3">
+            <p className="rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-bold text-blue-100 backdrop-blur sm:text-base">
+              Следува демонстрација во живо на ParkPal.
             </p>
-            <p className="font-display text-xl font-bold text-blue-100 sm:text-2xl">Прашања?</p>
-            <p className="mt-2 text-sm text-white/70 sm:mt-4">Ива Чекарова · Софтверско инженерство и иновации</p>
           </div>
         </Reveal>
       </div>

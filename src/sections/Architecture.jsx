@@ -11,9 +11,10 @@ const flow = [
 
 export default function Architecture() {
   return (
-    <SlideShell id="architecture" theme="dark">
-      <div className="bg-grid absolute inset-0 opacity-[0.06]" />
-      <div className="absolute top-1/2 right-0 h-[30rem] w-[30rem] -translate-y-1/2 rounded-full bg-secondary/10 blur-3xl" />
+    <SlideShell id="architecture" theme="dark" className="bg-gradient-to-br from-[#1B579D] via-[#214A83] to-[#10213D]">
+      <div className="bg-grid absolute inset-0 opacity-[0.07]" />
+      <div className="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#60A5FA]/20 blur-3xl" />
+      <div className="absolute -bottom-48 right-[-12rem] h-[34rem] w-[34rem] rounded-full bg-secondary/12 blur-3xl" />
 
       <div className="relative">
         <SectionHeading

@@ -6,9 +6,9 @@ export const SLIDES = [
   { id: "app", label: "Апликација", theme: "light" },
   { id: "features", label: "Карактеристики", theme: "light" },
   { id: "architecture", label: "Архитектура", theme: "dark" },
-  { id: "database", label: "База на податоци", theme: "light" },
   { id: "iot", label: "IoT прототип", theme: "light" },
   { id: "ai", label: "Иднина со AI", theme: "dark" },
   { id: "business", label: "Бизнис модел", theme: "light" },
-  { id: "conclusion", label: "Заклучок", theme: "gradient" },
+  { id: "conclusion", label: "Заклучок", theme: "dark" },
+  { id: "qa", label: "Прашања", theme: "dark" },
 ];

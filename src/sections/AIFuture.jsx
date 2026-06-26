@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { BrainCircuit, Camera, LineChart } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
@@ -12,24 +11,14 @@ const features = [
 
 export default function AIFuture() {
   return (
-    <SlideShell id="ai" theme="dark">
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute left-1/4 top-0 h-[26rem] w-[26rem] rounded-full bg-primary/25 blur-3xl"
-          animate={{ x: [0, 60, 0], y: [0, 40, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-1/4 h-[26rem] w-[26rem] rounded-full bg-secondary/20 blur-3xl"
-          animate={{ x: [0, -50, 0], y: [0, -30, 0] }}
-          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-      <div className="bg-grid absolute inset-0 opacity-[0.05]" />
+    <SlideShell id="ai" theme="dark" className="bg-gradient-to-br from-[#1B579D] via-[#214A83] to-[#10213D]">
+      <div className="bg-grid absolute inset-0 opacity-[0.07]" />
+      <div className="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#60A5FA]/20 blur-3xl" />
+      <div className="absolute -bottom-48 right-[-12rem] h-[34rem] w-[34rem] rounded-full bg-secondary/12 blur-3xl" />
 
       <div className="relative">
         <SectionHeading
-          eyebrow="09 · Иднина со AI"
+          eyebrow="08 · Иднина со AI"
           title="Следната генерација на ParkPal"
           subtitle="Темелот веќе е изграден. Овие три насоки водат кон паметна и предвидлива платформа."
           light
@@ -38,7 +27,7 @@ export default function AIFuture() {
         <div className="mt-4 grid grid-cols-1 gap-3 sm:mt-8 sm:gap-5 sm:grid-cols-3">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <Reveal key={title} direction="up" delay={i * 0.1}>
-              <div className="group relative flex h-full flex-col gap-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/40 sm:gap-4 sm:rounded-3xl sm:p-6">
+              <div className="group relative flex h-full flex-col gap-2 overflow-hidden rounded-2xl border border-white/12 bg-white/10 p-4 shadow-xl shadow-primary/10 ring-1 ring-white/10 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5 hover:border-white/25 hover:bg-white/15 sm:gap-4 sm:rounded-3xl sm:p-6">
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/30 sm:h-14 sm:w-14 sm:rounded-2xl">
                   <Icon size={18} strokeWidth={2} className="sm:hidden" />

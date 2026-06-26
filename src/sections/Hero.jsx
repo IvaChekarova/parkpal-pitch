@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Navigation, Sparkles } from "lucide-react";
+import { MapPin, Navigation } from "lucide-react";
 import PhoneMockup from "../components/PhoneMockup";
 import Reveal from "../components/Reveal";
 import SlideShell from "../components/SlideShell";
@@ -25,7 +25,6 @@ export default function Hero() {
         <div className="flex flex-col items-start gap-4 text-left sm:gap-6">
           <Reveal direction="up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary">
-              <Sparkles size={15} />
               Дипломска презентација · Софтверско инженерство и иновации
             </span>
           </Reveal>
@@ -38,8 +37,9 @@ export default function Hero() {
 
           <Reveal direction="up" delay={0.16}>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600 sm:text-2xl">
-              Паметна платформа за <span className="font-semibold text-ink">пронаоѓање</span> и{" "}
-              <span className="font-semibold text-ink">резервација</span> на паркинг места.
+              Паметна апликација за <span className="font-semibold text-ink">наоѓање</span>,{" "}
+              <span className="font-semibold text-ink">резервирање</span> и{" "}
+              <span className="font-semibold text-ink">споделување</span> паркинг.
             </p>
           </Reveal>
 
@@ -60,6 +60,21 @@ export default function Hero() {
               <span className="text-sm text-slate-500">Софтверско инженерство и иновации</span>
             </div>
           </Reveal>
+
+          <Reveal direction="up" delay={0.4}>
+            <div className="mt-1 flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/75 px-3 py-2 shadow-sm backdrop-blur">
+              <img
+                src="/assets/college/brainster-next-symbol.svg"
+                alt="Brainster Next"
+                className="h-8 w-8"
+              />
+              <img
+                src="/assets/college/brainster-next-wordmark.png"
+                alt="Brainster Next"
+                className="h-8 w-auto rounded-lg"
+              />
+            </div>
+          </Reveal>
         </div>
 
         {/* Phone mockups */}
@@ -73,7 +88,7 @@ export default function Hero() {
             <div className="animate-float">
               <div className="-translate-x-1/2 -translate-y-1/2 -rotate-3">
                 <PhoneMockup
-                  src="/assets/driver/home.png"
+                  src="/assets/cover/home-latest.png"
                   alt="ParkPal почетен екран со мапа"
                   label="ParkPal · Почетен екран"
                   size="lg"
@@ -91,7 +106,7 @@ export default function Hero() {
             <div className="animate-float-slow">
               <div className="rotate-6">
                 <PhoneMockup
-                  src="/assets/driver/qr-ticket.png"
+                  src="/assets/cover/qr-ticket-latest.png"
                   alt="QR билет за паркирање"
                   label="ParkPal · QR билет"
                   size="sm"

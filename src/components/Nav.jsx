@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { MapPin } from "lucide-react";
 import { SLIDES } from "../slides";
 
 export default function Nav() {
@@ -55,11 +54,12 @@ export default function Nav() {
           dark ? "text-white" : "text-ink"
         }`}
       >
-        <div className="flex items-center gap-2 font-display text-lg font-extrabold">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-lg shadow-primary/30">
-            <MapPin size={18} strokeWidth={2.5} />
-          </span>
-          ParkPal
+        <div className="flex items-center">
+          <img
+            src="/assets/brand/parkpal-logo.svg"
+            alt="ParkPal"
+            className={`h-10 w-auto drop-shadow-sm transition duration-500 ${dark ? "brightness-0 invert" : ""}`}
+          />
         </div>
       </header>
     </>

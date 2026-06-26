@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeftRight, Car, Home, MapPin, Warehouse } from "lucide-react";
+import { ArrowLeftRight, Car, Warehouse } from "lucide-react";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import SlideShell from "../components/SlideShell";
@@ -41,13 +41,16 @@ export default function SolutionOverview() {
               <ArrowLeftRight className="text-primary" size={18} />
             </div>
             <motion.div
-              className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-2xl shadow-primary/30 sm:h-24 sm:w-24 sm:rounded-[2rem]"
+              className="relative flex h-12 w-20 items-center justify-center rounded-2xl border border-primary/10 bg-white px-2 shadow-2xl shadow-primary/20 sm:h-24 sm:w-36 sm:rounded-[2rem] sm:px-4"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
               <span className="absolute inset-0 animate-pulse-glow rounded-2xl bg-primary/30 blur-xl sm:rounded-[2rem]" />
-              <MapPin className="relative" size={20} strokeWidth={2} />
-              <MapPin className="relative hidden sm:block" size={40} strokeWidth={2} />
+              <img
+                src="/assets/brand/parkpal-logo.svg"
+                alt="ParkPal"
+                className="relative max-h-8 w-full object-contain sm:max-h-16"
+              />
             </motion.div>
             <span className="font-display text-sm font-extrabold text-gradient sm:text-lg">ParkPal</span>
             <div className="hidden w-full items-center justify-between sm:flex">
@@ -60,17 +63,22 @@ export default function SolutionOverview() {
       </Reveal>
 
       <Reveal direction="up" delay={0.25}>
-        <div className="mt-4 hidden grid-cols-1 items-center gap-3 overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:mt-5 sm:grid sm:gap-6 sm:rounded-[2.5rem] sm:p-6 lg:grid-cols-[auto_1fr]">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary sm:h-14 sm:w-14 sm:rounded-3xl">
-            <Home size={20} strokeWidth={2} className="sm:hidden" />
-            <Home size={26} strokeWidth={2} className="hidden sm:block" />
+        <div className="mx-auto mt-4 hidden max-w-5xl grid-cols-1 items-center gap-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/80 p-3 shadow-sm sm:mt-5 sm:grid sm:gap-4 sm:p-4 lg:grid-cols-[auto_1fr]">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[#FF5A5F]/10 sm:h-11 sm:w-11">
+            <img
+              src="/assets/brand/airbnb-tile.svg"
+              alt="Airbnb"
+              className="h-5 w-5 object-contain sm:h-6 sm:w-6"
+            />
           </div>
           <div>
-            <span className="section-eyebrow text-secondary">Инспирација</span>
-            <h3 className="mt-1 font-display text-base font-bold text-ink sm:mt-1 sm:text-2xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="section-eyebrow text-[0.65rem] text-secondary">Инспирација</span>
+            </div>
+            <h3 className="mt-0.5 font-display text-sm font-bold text-ink sm:text-lg">
               „Airbnb за паркинг места“
             </h3>
-            <p className="mt-1 max-w-3xl text-xs leading-relaxed text-slate-500 sm:mt-2 sm:text-base">
+            <p className="mt-1 max-w-3xl text-xs leading-relaxed text-slate-500 sm:text-sm">
               Секое празно паркинг место — јавно или приватно — станува ресурс кој може да се
               пронајде и резервира за неколку допири.
             </p>
